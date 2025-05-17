@@ -41,13 +41,17 @@
   <div class="card">
     <h2>🚆 实时火车信息</h2>
     <iframe src="https://www.realtimetrains.co.uk/search/detailed/dep/XXX"></iframe>
+    <!-- 替换 XXX 为你的车站代码，例如 PAD、LBG、CHX 等 -->
   </div>
 
-  <!-- 引入 ical.js 库（CDN） -->
+  <!-- 引入 ical.js 库 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ical.js/1.4.0/ical.min.js"></script>
+
   <script>
     async function loadBinCollectionInfo() {
-      const url = "https://recyclingservices.bromley.gov.uk/waste/6147801/calendar.ics";
+      const proxy = "https://corsproxy.io/?";
+      const target = "https://recyclingservices.bromley.gov.uk/waste/6147801/calendar.ics";
+      const url = proxy + encodeURIComponent(target);
 
       try {
         const res = await fetch(url);
@@ -57,7 +61,6 @@
         const comp = new ICAL.Component(jcalData);
         const vevents = comp.getAllSubcomponents("vevent");
 
-        // 提取事件列表
         const events = vevents.map(ev => {
           const e = new ICAL.Event(ev);
           return {
@@ -66,7 +69,6 @@
           };
         });
 
-        // 获取当前时间以后的第一个事件
         const now = new Date();
         const next = events
           .filter(e => e.start >= now)
@@ -90,3 +92,4 @@
   </script>
 </body>
 </html>
+
