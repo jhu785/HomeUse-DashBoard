@@ -41,20 +41,18 @@
   <div class="card">
     <h2>🚆 实时火车信息</h2>
     <iframe src="https://www.realtimetrains.co.uk/search/detailed/dep/XXX"></iframe>
-    <!-- 替换 XXX 为你的车站代码，例如 PAD、LBG、CHX 等 -->
+    <!-- 替换 XXX 为你的火车站代码，例如 PAD、LBG、CHX 等 -->
   </div>
 
-  <!-- 引入 ical.js 库 -->
+  <!-- 引入 ical.js 解析库 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ical.js/1.4.0/ical.min.js"></script>
 
   <script>
     async function loadBinCollectionInfo() {
-      const proxy = "https://corsproxy.io/?";
-      const target = "https://recyclingservices.bromley.gov.uk/waste/6147801/calendar.ics";
-      const url = proxy + encodeURIComponent(target);
+      const target = "https://<你的用户名>.github.io/home-dashboard/calendar.ics"; // 替换为你的真实链接
 
       try {
-        const res = await fetch(url);
+        const res = await fetch(target);
         const icsText = await res.text();
 
         const jcalData = ICAL.parse(icsText);
@@ -92,4 +90,3 @@
   </script>
 </body>
 </html>
-
