@@ -44,49 +44,20 @@
     <!-- 替换 XXX 为你的火车站代码，例如 PAD、LBG、CHX 等 -->
   </div>
 
-  <!-- 引入 ical.js 解析库 -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ical.js/1.4.0/ical.min.js"></script>
-
   <script>
-    async function loadBinCollectionInfo() {
-      const target = "https://github.com/jhu785/HomeUse-DashBoard/blob/main/calendar.ics"; // 替换为你的真实链接
-
-      try {
-        const res = await fetch(target);
-        const icsText = await res.text();
-
-        const jcalData = ICAL.parse(icsText);
-        const comp = new ICAL.Component(jcalData);
-        const vevents = comp.getAllSubcomponents("vevent");
-
-        const events = vevents.map(ev => {
-          const e = new ICAL.Event(ev);
-          return {
-            summary: e.summary,
-            start: e.startDate.toJSDate()
-          };
-        });
-
-        const now = new Date();
-        const next = events
-          .filter(e => e.start >= now)
-          .sort((a, b) => a.start - b.start)[0];
-
-        if (next) {
-          const options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
-          const displayDate = next.start.toLocaleDateString('zh-CN', options);
-          document.getElementById("bin-info").innerText = `下一次：${displayDate} - ${next.summary}`;
-        } else {
-          document.getElementById("bin-info").innerText = "未找到未来的垃圾日程。";
-        }
-
-      } catch (err) {
-        console.error("获取垃圾信息失败：", err);
+    fetch("bin_collection.json")
+      .then(res => res.json())
+      .then(data => {
+        const date = new Date(data.date);
+        const options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
+        const displayDate = date.toLocaleDateString('zh-CN', options);
+        document.getElementById("bin-info").innerText = `下一次：${displayDate} - ${data.summary}`;
+      })
+      .catch(err => {
+        console.error("加载失败：", err);
         document.getElementById("bin-info").innerText = "加载失败，请稍后重试。";
-      }
-    }
-
-    loadBinCollectionInfo();
+      });
   </script>
 </body>
 </html>
+
