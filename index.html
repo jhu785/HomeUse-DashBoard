@@ -57,7 +57,7 @@
   </div>
 
   <script>
-   fetch("bin_collection_all.json")
+   fetch("bin_collection.json")
   .then(res => res.json())
   .then(events => {
     if (!Array.isArray(events) || events.length === 0) {
