@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>家庭信息面板</title>
-  <meta http-equiv="refresh" content="300"> <!-- 每5分钟刷新页面 -->
+  <meta http-equiv="refresh" content="300">
   <style>
     body {
       font-family: sans-serif;
@@ -35,14 +35,58 @@
 
   <div class="card">
     <h2>♻️ 垃圾收集信息</h2>
-    <p>普通垃圾：每周一早上</p>
-    <p>可回收垃圾：每周四早上</p>
+    <p id="bin-info">加载中...</p>
   </div>
 
   <div class="card">
     <h2>🚆 实时火车信息</h2>
     <iframe src="https://www.realtimetrains.co.uk/search/detailed/dep/XXX"></iframe>
-    <!-- 把 XXX 替换成你最近的车站代码，例如 PAD 代表伦敦帕丁顿 -->
   </div>
+
+  <!-- 引入 ical.js 库（CDN） -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ical.js/1.4.0/ical.min.js"></script>
+  <script>
+    async function loadBinCollectionInfo() {
+      const url = "https://recyclingservices.bromley.gov.uk/waste/6147801/calendar.ics";
+
+      try {
+        const res = await fetch(url);
+        const icsText = await res.text();
+
+        const jcalData = ICAL.parse(icsText);
+        const comp = new ICAL.Component(jcalData);
+        const vevents = comp.getAllSubcomponents("vevent");
+
+        // 提取事件列表
+        const events = vevents.map(ev => {
+          const e = new ICAL.Event(ev);
+          return {
+            summary: e.summary,
+            start: e.startDate.toJSDate()
+          };
+        });
+
+        // 获取当前时间以后的第一个事件
+        const now = new Date();
+        const next = events
+          .filter(e => e.start >= now)
+          .sort((a, b) => a.start - b.start)[0];
+
+        if (next) {
+          const options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
+          const displayDate = next.start.toLocaleDateString('zh-CN', options);
+          document.getElementById("bin-info").innerText = `下一次：${displayDate} - ${next.summary}`;
+        } else {
+          document.getElementById("bin-info").innerText = "未找到未来的垃圾日程。";
+        }
+
+      } catch (err) {
+        console.error("获取垃圾信息失败：", err);
+        document.getElementById("bin-info").innerText = "加载失败，请稍后重试。";
+      }
+    }
+
+    loadBinCollectionInfo();
+  </script>
 </body>
 </html>
