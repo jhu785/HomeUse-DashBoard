@@ -40,6 +40,11 @@
       font-weight: bold;
       font-size: 1.1em;
     }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
   </style>
 </head>
 <body>
@@ -51,48 +56,49 @@
   </div>
 
   <div class="card">
-    <h2>🚆 实时火车信息</h2>
-    <iframe src="https://www.realtimetrains.co.uk/search/detailed/dep/XXX"></iframe>
-    <!-- 替换 XXX 为你的车站代码 -->
+    <h2>🚆 Orpington 实时列车信息</h2>
+    <iframe
+      src="https://www.realtimetrains.co.uk/search/detailed/dep/ORP">
+    </iframe>
   </div>
 
   <script>
-   fetch("bin_collection.json")
-  .then(res => res.json())
-  .then(events => {
-    if (!Array.isArray(events) || events.length === 0) {
-      document.getElementById("bin-info").innerText = "没有垃圾收集数据。";
-      return;
-    }
+    fetch("bin_collection.json")
+      .then(res => res.json())
+      .then(events => {
+        if (!Array.isArray(events) || events.length === 0) {
+          document.getElementById("bin-info").innerText = "没有垃圾收集数据。";
+          return;
+        }
 
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
-    const html = events.slice(0, 5).map(ev => {
-      const date = new Date(ev.date);
-      const dateStr = date.toLocaleDateString('zh-CN', options);
+        const html = events.slice(0, 5).map(ev => {
+          const date = new Date(ev.date);
+          const dateStr = date.toLocaleDateString('zh-CN', options);
 
-      // 分类颜色样式
-      let cssClass = '';
-      const lower = ev.summary.toLowerCase();
-      if (lower.includes("recycling")) cssClass = "recycling";
-      else if (lower.includes("food")) cssClass = "food";
-      else if (lower.includes("refuse")) cssClass = "refuse";
-      else if (lower.includes("paper")) cssClass = "paper";
+          // 分类颜色样式
+          let cssClass = '';
+          const lower = ev.summary.toLowerCase();
+          if (lower.includes("recycling")) cssClass = "recycling";
+          else if (lower.includes("food")) cssClass = "food";
+          else if (lower.includes("refuse")) cssClass = "refuse";
+          else if (lower.includes("paper")) cssClass = "paper";
 
-      return `
-        <div class="event ${cssClass}">
-          <div class="date">📅 ${dateStr}</div>
-          <div class="summary">🗑️ ${ev.summary}</div>
-        </div>
-      `;
-    }).join("");
+          return `
+            <div class="event ${cssClass}">
+              <div class="date">📅 ${dateStr}</div>
+              <div class="summary">🗑️ ${ev.summary}</div>
+            </div>
+          `;
+        }).join("");
 
-    document.getElementById("bin-info").innerHTML = html;
-  })
-  .catch(err => {
-    console.error("加载失败：", err);
-    document.getElementById("bin-info").innerText = "加载失败，请稍后重试。";
-  });
-</script>
-
-
+        document.getElementById("bin-info").innerHTML = html;
+      })
+      .catch(err => {
+        console.error("加载失败：", err);
+        document.getElementById("bin-info").innerText = "加载失败，请稍后重试。";
+      });
+  </script>
+</body>
+</html>
