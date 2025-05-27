@@ -55,7 +55,7 @@
   <h1>🏠 家庭信息面板</h1>
 
   <div class="card">
-    <h2>♻️ 垃圾收集时间（前 5 次）</h2>
+    <h2>♻️ 垃圾收集时间（接下来 5 次）</h2>
     <div id="bin-info">加载中...</div>
   </div>
 
@@ -78,9 +78,25 @@
           return;
         }
 
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+
         const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
-        const html = events.slice(0, 5).map(ev => {
+        const upcoming = events
+          .filter(ev => {
+            const evDate = new Date(ev.date);
+            evDate.setHours(0, 0, 0, 0);
+            return evDate >= today;
+          })
+          .slice(0, 5);
+
+        if (upcoming.length === 0) {
+          document.getElementById("bin-info").innerText = "没有即将到来的垃圾收集日。";
+          return;
+        }
+
+        const html = upcoming.map(ev => {
           const date = new Date(ev.date);
           const dateStr = date.toLocaleDateString('zh-CN', options);
 
@@ -108,4 +124,5 @@
   </script>
 </body>
 </html>
+
 
