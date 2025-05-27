@@ -5,6 +5,9 @@ on:
     - cron: '0 7 * * *'  # 每天上午 7 点 UTC（英国夏令时即 8 点）
   workflow_dispatch:      # 支持手动触发
 
+permissions:
+  contents: write
+
 jobs:
   update-json:
     runs-on: ubuntu-latest
