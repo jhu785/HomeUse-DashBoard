@@ -1,15 +1,11 @@
 [
   {
-    "summary": "Food Waste collection",
-    "date": "2025-06-16"
-  },
-  {
     "summary": "Mixed Recycling (Cans, Plastics & Glass) collection",
     "date": "2025-06-16"
   },
   {
     "summary": "Food Waste collection",
-    "date": "2025-06-23"
+    "date": "2025-06-16"
   },
   {
     "summary": "Non-Recyclable Refuse collection",
@@ -20,11 +16,15 @@
     "date": "2025-06-23"
   },
   {
-    "summary": "Mixed Recycling (Cans, Plastics & Glass) collection",
-    "date": "2025-06-30"
+    "summary": "Food Waste collection",
+    "date": "2025-06-23"
   },
   {
     "summary": "Food Waste collection",
+    "date": "2025-06-30"
+  },
+  {
+    "summary": "Mixed Recycling (Cans, Plastics & Glass) collection",
     "date": "2025-06-30"
   },
   {
@@ -40,11 +40,11 @@
     "date": "2025-07-07"
   },
   {
-    "summary": "Food Waste collection",
+    "summary": "Mixed Recycling (Cans, Plastics & Glass) collection",
     "date": "2025-07-14"
   },
   {
-    "summary": "Mixed Recycling (Cans, Plastics & Glass) collection",
+    "summary": "Food Waste collection",
     "date": "2025-07-14"
   },
   {
@@ -52,11 +52,11 @@
     "date": "2025-07-21"
   },
   {
-    "summary": "Food Waste collection",
+    "summary": "Non-Recyclable Refuse collection",
     "date": "2025-07-21"
   },
   {
-    "summary": "Non-Recyclable Refuse collection",
+    "summary": "Food Waste collection",
     "date": "2025-07-21"
   },
   {
@@ -68,10 +68,6 @@
     "date": "2025-07-28"
   },
   {
-    "summary": "Non-Recyclable Refuse collection",
-    "date": "2025-08-04"
-  },
-  {
     "summary": "Paper & Cardboard collection",
     "date": "2025-08-04"
   },
@@ -80,11 +76,15 @@
     "date": "2025-08-04"
   },
   {
-    "summary": "Food Waste collection",
+    "summary": "Non-Recyclable Refuse collection",
+    "date": "2025-08-04"
+  },
+  {
+    "summary": "Mixed Recycling (Cans, Plastics & Glass) collection",
     "date": "2025-08-11"
   },
   {
-    "summary": "Mixed Recycling (Cans, Plastics & Glass) collection",
+    "summary": "Food Waste collection",
     "date": "2025-08-11"
   },
   {
