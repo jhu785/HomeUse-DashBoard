@@ -1,5 +1,9 @@
 [
   {
+    "summary": "Food Waste collection",
+    "date": "2025-07-07"
+  },
+  {
     "summary": "Non-Recyclable Refuse collection",
     "date": "2025-07-07"
   },
@@ -9,14 +13,10 @@
   },
   {
     "summary": "Food Waste collection",
-    "date": "2025-07-07"
-  },
-  {
-    "summary": "Mixed Recycling (Cans, Plastics & Glass) collection",
     "date": "2025-07-14"
   },
   {
-    "summary": "Food Waste collection",
+    "summary": "Mixed Recycling (Cans, Plastics & Glass) collection",
     "date": "2025-07-14"
   },
   {
@@ -40,15 +40,15 @@
     "date": "2025-07-28"
   },
   {
-    "summary": "Non-Recyclable Refuse collection",
-    "date": "2025-08-04"
-  },
-  {
     "summary": "Food Waste collection",
     "date": "2025-08-04"
   },
   {
     "summary": "Paper & Cardboard collection",
+    "date": "2025-08-04"
+  },
+  {
+    "summary": "Non-Recyclable Refuse collection",
     "date": "2025-08-04"
   },
   {
@@ -60,6 +60,10 @@
     "date": "2025-08-11"
   },
   {
+    "summary": "Non-Recyclable Refuse collection",
+    "date": "2025-08-18"
+  },
+  {
     "summary": "Paper & Cardboard collection",
     "date": "2025-08-18"
   },
@@ -68,16 +72,16 @@
     "date": "2025-08-18"
   },
   {
-    "summary": "Non-Recyclable Refuse collection",
-    "date": "2025-08-18"
+    "summary": "Mixed Recycling (Cans, Plastics & Glass) collection",
+    "date": "2025-08-25"
   },
   {
     "summary": "Food Waste collection",
     "date": "2025-08-25"
   },
   {
-    "summary": "Mixed Recycling (Cans, Plastics & Glass) collection",
-    "date": "2025-08-25"
+    "summary": "Food Waste collection",
+    "date": "2025-09-01"
   },
   {
     "summary": "Non-Recyclable Refuse collection",
@@ -89,14 +93,10 @@
   },
   {
     "summary": "Food Waste collection",
-    "date": "2025-09-01"
-  },
-  {
-    "summary": "Mixed Recycling (Cans, Plastics & Glass) collection",
     "date": "2025-09-08"
   },
   {
-    "summary": "Food Waste collection",
+    "summary": "Mixed Recycling (Cans, Plastics & Glass) collection",
     "date": "2025-09-08"
   },
   {
