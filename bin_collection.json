@@ -1,22 +1,22 @@
 [
   {
-    "summary": "Food Waste collection",
-    "date": "2025-08-26"
-  },
-  {
     "summary": "Mixed Recycling (Cans, Plastics & Glass) collection",
     "date": "2025-08-26"
   },
   {
     "summary": "Food Waste collection",
-    "date": "2025-09-01"
+    "date": "2025-08-26"
   },
   {
-    "summary": "Paper & Cardboard collection",
+    "summary": "Food Waste collection",
     "date": "2025-09-01"
   },
   {
     "summary": "Non-Recyclable Refuse collection",
+    "date": "2025-09-01"
+  },
+  {
+    "summary": "Paper & Cardboard collection",
     "date": "2025-09-01"
   },
   {
@@ -28,56 +28,60 @@
     "date": "2025-09-08"
   },
   {
-    "summary": "Food Waste collection",
+    "summary": "Paper & Cardboard collection",
     "date": "2025-09-15"
   },
   {
-    "summary": "Paper & Cardboard collection",
+    "summary": "Food Waste collection",
     "date": "2025-09-15"
   },
   {
     "summary": "Non-Recyclable Refuse collection",
     "date": "2025-09-15"
-  },
-  {
-    "summary": "Mixed Recycling (Cans, Plastics & Glass) collection",
-    "date": "2025-09-22"
   },
   {
     "summary": "Food Waste collection",
     "date": "2025-09-22"
   },
   {
-    "summary": "Food Waste collection",
-    "date": "2025-09-29"
+    "summary": "Mixed Recycling (Cans, Plastics & Glass) collection",
+    "date": "2025-09-22"
   },
   {
     "summary": "Non-Recyclable Refuse collection",
     "date": "2025-09-29"
   },
   {
-    "summary": "Paper & Cardboard collection",
+    "summary": "Food Waste collection",
     "date": "2025-09-29"
   },
   {
-    "summary": "Food Waste collection",
-    "date": "2025-10-06"
+    "summary": "Paper & Cardboard collection",
+    "date": "2025-09-29"
   },
   {
     "summary": "Mixed Recycling (Cans, Plastics & Glass) collection",
     "date": "2025-10-06"
   },
   {
-    "summary": "Paper & Cardboard collection",
-    "date": "2025-10-13"
+    "summary": "Food Waste collection",
+    "date": "2025-10-06"
   },
   {
     "summary": "Non-Recyclable Refuse collection",
     "date": "2025-10-13"
   },
   {
+    "summary": "Paper & Cardboard collection",
+    "date": "2025-10-13"
+  },
+  {
     "summary": "Food Waste collection",
     "date": "2025-10-13"
+  },
+  {
+    "summary": "Food Waste collection",
+    "date": "2025-10-20"
   },
   {
     "summary": "Mixed Recycling (Cans, Plastics & Glass) collection",
@@ -85,18 +89,14 @@
   },
   {
     "summary": "Food Waste collection",
-    "date": "2025-10-20"
-  },
-  {
-    "summary": "Food Waste collection",
-    "date": "2025-10-27"
-  },
-  {
-    "summary": "Paper & Cardboard collection",
     "date": "2025-10-27"
   },
   {
     "summary": "Non-Recyclable Refuse collection",
+    "date": "2025-10-27"
+  },
+  {
+    "summary": "Paper & Cardboard collection",
     "date": "2025-10-27"
   },
   {
@@ -108,7 +108,7 @@
     "date": "2025-11-03"
   },
   {
-    "summary": "Food Waste collection",
+    "summary": "Non-Recyclable Refuse collection",
     "date": "2025-11-10"
   },
   {
@@ -116,7 +116,7 @@
     "date": "2025-11-10"
   },
   {
-    "summary": "Non-Recyclable Refuse collection",
+    "summary": "Food Waste collection",
     "date": "2025-11-10"
   }
 ]
