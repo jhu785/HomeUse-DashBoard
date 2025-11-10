@@ -1,17 +1,5 @@
 [
   {
-    "summary": "Non-Recyclable Refuse collection",
-    "date": "2025-11-10"
-  },
-  {
-    "summary": "Paper & Cardboard collection",
-    "date": "2025-11-10"
-  },
-  {
-    "summary": "Food Waste collection",
-    "date": "2025-11-10"
-  },
-  {
     "summary": "Food Waste collection",
     "date": "2025-11-17"
   },
@@ -118,5 +106,17 @@
   {
     "summary": "Food Waste collection",
     "date": "2026-01-26"
+  },
+  {
+    "summary": "Food Waste collection",
+    "date": "2026-02-02"
+  },
+  {
+    "summary": "Non-Recyclable Refuse collection",
+    "date": "2026-02-02"
+  },
+  {
+    "summary": "Paper & Cardboard collection",
+    "date": "2026-02-02"
   }
 ]
