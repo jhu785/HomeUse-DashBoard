@@ -1,14 +1,6 @@
 [
   {
     "summary": "Food Waste collection",
-    "date": "2026-05-05"
-  },
-  {
-    "summary": "Mixed Recycling (Cans, Plastics & Glass) collection",
-    "date": "2026-05-05"
-  },
-  {
-    "summary": "Food Waste collection",
     "date": "2026-05-11"
   },
   {
@@ -118,5 +110,13 @@
   {
     "summary": "Non-Recyclable Refuse collection",
     "date": "2026-07-20"
+  },
+  {
+    "summary": "Food Waste collection",
+    "date": "2026-07-27"
+  },
+  {
+    "summary": "Mixed Recycling (Cans, Plastics & Glass) collection",
+    "date": "2026-07-27"
   }
 ]
