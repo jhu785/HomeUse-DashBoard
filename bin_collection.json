@@ -1,13 +1,5 @@
 [
   {
-    "summary": "Food Waste collection",
-    "date": "2026-07-27"
-  },
-  {
-    "summary": "Mixed Recycling (Cans, Plastics & Glass) collection",
-    "date": "2026-07-27"
-  },
-  {
     "summary": "Paper & Cardboard collection",
     "date": "2026-08-03"
   },
@@ -118,5 +110,13 @@
   {
     "summary": "Paper & Cardboard collection",
     "date": "2026-10-12"
+  },
+  {
+    "summary": "Food Waste collection",
+    "date": "2026-10-19"
+  },
+  {
+    "summary": "Mixed Recycling (Cans, Plastics & Glass) collection",
+    "date": "2026-10-19"
   }
 ]
